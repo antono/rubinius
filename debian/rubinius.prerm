@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+
+set -e
+
+case "$1" in
+    remove|deconfigure)
+        update-alternatives --remove gem /usr/bin/rbx-gem
+        update-alternatives --remove ruby /usr/bin/rbx-ruby
+        ;;
+    *)
+esac
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,20 @@
+#!/bin/sh
+# 
+
+set -e
+
+case "$1" in
+  configure)
+        update-alternatives --install /usr/bin/gem gem /usr/bin/rbx-gem 10 
+        update-alternatives \
+		--install /usr/bin/ruby ruby /usr/bin/rbx-ruby 10 \
+		--slave /usr/bin/rdoc rdoc /usr/bin/rbx-rdoc \
+		--slave /usr/bin/irb irb /usr/bin/rbx-irb \
+		--slave /usr/bin/ri ri /usr/bin/rbx-ri
+       ;;
+  *)
+esac
+
+#DEBHELPER#
+
+exit 0

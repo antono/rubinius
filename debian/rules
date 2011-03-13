@@ -1,0 +1,84 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+export DH_ALWAYS_EXCLUDE=CVS:\.svn:\.git
+
+PACKAGE := rubinius
+
+PKG_DIR := $(CURDIR)/debian/tmp
+BIN_DIR := /usr/bin
+MAN_DIR := /usr/share/man/man1
+INC_DIR := /usr/include/$(PACKAGE)
+LIB_DIR := /usr/lib
+GEM_DIR := /usr/lib/rubinius/gems
+
+export FAKEROOT=$(PKG_DIR)
+
+configure: configure-stamp
+	dh_testdir
+	./configure \
+		--system-name=ubuntu-11.04 \
+		--bindir=$(BIN_DIR) \
+		--includedir=$(INC_DIR) \
+		--libdir=$(LIB_DIR) \
+		--mandir=$(MAN_DIR) \
+		--gemsdir=$(GEM_DIR)
+
+configure-stamp:
+	touch configure-stamp
+
+build: configure
+	/usr/bin/ruby1.8 -S rake build
+
+install:
+	FAKEROOT=$(PKG_DIR) /usr/bin/ruby1.8 -S rake install
+
+binary: install
+	dh_testroot
+	#dh_prep
+	dh_installdirs
+	#dh_auto_install
+	#dh_install
+	dh_installdocs
+	dh_installchangelogs
+	#dh_installexamples
+	#dh_installman
+	#dh_installcatalogs
+	#dh_installcron
+	#dh_installdebconf
+	#dh_installemacsen
+	#dh_installifupdown
+	#dh_installinfo
+	#dh_installinit
+	#dh_installmenu
+	#dh_installmime
+	#dh_installmodules
+	#dh_installlogcheck
+	#dh_installlogrotate
+	#dh_bugfiles
+	dh_lintian
+	#dh_icons
+	#dh_usrlocal
+	#dh_link
+	dh_compress
+	dh_fixperms
+	dh_strip #--dbg-package=rubinius-dbg
+	dh_makeshlibs
+	dh_shlibdeps
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch:
+
+binary-indep:
+
+clean:
+	dh_testdir
+	dh_clean --dirs-only
+	dh_prep
+	#rm config.rb
+	# FIXME fix rake task

@@ -1,0 +1,31 @@
+rubinius (1.2.2-ppa1) natty; urgency=low
+
+  * Enable alternatives system.
+  * Build doc package.
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Sun, 13 Mar 2011 18:06:01 +0200
+
+rubinius (1.2.2-antono1) natty; urgency=low
+
+  * 1.2.2 from git
+  * Depends on llvm-2.8
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Tue, 08 Mar 2011 05:39:07 +0200
+
+rubinius (1.2.0-antono0) natty; urgency=low
+
+  * 1.2.0 from git master
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Wed, 22 Dec 2010 06:37:19 +0200
+
+rubinius (1.1.2-antono1) maverick; urgency=low
+
+  * Rebuild from git
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Tue, 23 Nov 2010 00:30:21 +0200
+
+rubinius (1.0.0-uor0) lucid; urgency=low
+
+  * Initial release for Ubuntu on Rails PPA
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Fri, 14 May 2010 04:34:16 +0300

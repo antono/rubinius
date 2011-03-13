@@ -1,0 +1,46 @@
+Source: rubinius
+Section: ruby
+Priority: optional
+Maintainer: Antono Vasiljev <antono.vasiljev@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev, libreadline5-dev, zlib1g-dev,
+ libssl-dev, ruby, ruby-dev, rake, texinfo, llvm-2.8-dev, llvm-2.8, llvm
+Standards-Version: 3.9.1
+Homepage: http://rubini.us/
+
+Package: rubinius
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, llvm-2.8
+Description: Yet Another Implementation of the Ruby programming language.
+ Rubinius is software that translates the code for the
+ Ruby programming language and turns it into effecient
+ machine code then executes it.
+ .
+ The Rubinius bytecode virtual machine is written in C++,
+ incorporating LLVM to compile bytecode to machine code at runtime.
+ The bytecode compiler and vast majority of the core
+ classes are written in pure Ruby.
+ .
+ To interact with the rest of the system, the VM provides
+ primitives which can be attached to methods and invoked.
+ Additionally, FFI provides a direct call path to most
+ C functions.
+
+Package: rubinius-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Yet Another Implementation of the Ruby programming language.
+ Rubinius is software that translates the code for the
+ Ruby programming language and turns it into effecient
+ machine code then executes it.
+ .
+ This package contains the header files.
+
+Package: rubinius-doc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Yet Another Implementation of the Ruby programming language.
+ Rubinius is software that translates the code for the
+ Ruby programming language and turns it into effecient
+ machine code then executes it.
+ .
+ This package contains the header files.
