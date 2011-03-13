@@ -3,7 +3,7 @@
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
-export DH_ALWAYS_EXCLUDE=CVS:\.svn:\.git
+export DH_ALWAYS_EXCLUDE=CVS:.svn:.git
 
 PACKAGE := rubinius
 
@@ -41,7 +41,7 @@ binary-indep:
 
 binary-arch:
 	dh_testroot
-	dh_prep
+	#dh_prep
 	dh_installdirs
 	#dh_auto_install
 	#dh_install
@@ -55,20 +55,28 @@ binary-arch:
 	#dh_installemacsen
 	#dh_installifupdown
 	#dh_installinfo
+	#dh_pysupport
 	#dh_installinit
 	#dh_installmenu
 	#dh_installmime
 	#dh_installmodules
 	#dh_installlogcheck
 	#dh_installlogrotate
+	#dh_installpam
+	#dh_installppp
+	#dh_installudev
+	#dh_installwm
+	#dh_installxfonts
 	#dh_bugfiles
 	dh_lintian
+	#dh_gconf
 	#dh_icons
+	#dh_perl
 	#dh_usrlocal
 	#dh_link
 	dh_compress
 	dh_fixperms
-	dh_strip #--dbg-package=rubinius-dbg
+	dh_strip
 	dh_makeshlibs
 	dh_shlibdeps
 	dh_installdeb
@@ -78,7 +86,8 @@ binary-arch:
 
 clean:
 	dh_testdir
-	dh_clean --dirs-only
+	dh_clean
 	dh_prep
 	#rm config.rb
 	# FIXME fix rake task
+	# /usr/bin/ruby1.8 -S rake clean
