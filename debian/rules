@@ -7,7 +7,7 @@ export DH_ALWAYS_EXCLUDE=CVS:\.svn:\.git
 
 PACKAGE := rubinius
 
-PKG_DIR := $(CURDIR)/debian/tmp
+PKG_DIR := $(CURDIR)/debian/$(PACKAGE)
 BIN_DIR := /usr/bin
 MAN_DIR := /usr/share/man/man1
 INC_DIR := /usr/include/$(PACKAGE)

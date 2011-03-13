@@ -27,23 +27,3 @@ Description: Yet Another Implementation of the Ruby programming language.
  primitives which can be attached to methods and invoked.
  Additionally, FFI provides a direct call path to most
  C functions.
-
-Package: rubinius-dev
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Yet Another Implementation of the Ruby programming language.
- Rubinius is software that translates the code for the
- Ruby programming language and turns it into effecient
- machine code then executes it.
- .
- This package contains the header files.
-
-Package: rubinius-doc
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Yet Another Implementation of the Ruby programming language.
- Rubinius is software that translates the code for the
- Ruby programming language and turns it into effecient
- machine code then executes it.
- .
- This package contains the header files.
