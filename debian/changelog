@@ -1,3 +1,9 @@
+rubinius (1.2.2-ppa2) natty; urgency=low
+
+  * Prefix all binaries with rbx
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Mon, 14 Mar 2011 00:45:38 +0200
+
 rubinius (1.2.2-ppa1) natty; urgency=low
 
   * Enable alternatives system.
