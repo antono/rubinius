@@ -5,11 +5,14 @@ Maintainer: Antono Vasiljev <antono.vasiljev@gmail.com>
 Build-Depends: debhelper (>= 7), autotools-dev, libreadline5-dev, zlib1g-dev,
  libssl-dev, ruby, ruby-dev, rake, texinfo, llvm-2.8-dev, llvm-2.8, llvm
 Standards-Version: 3.9.1
+Vcs-Git: git://github.com/evanphx/rubinius.git
+Vcs-browser: http://github.com/evanphx/rubinius
 Homepage: http://rubini.us/
 
 Package: rubinius
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, llvm-2.8
+Provides: ruby-interpreter
 Description: Yet Another Implementation of the Ruby programming language.
  Rubinius is software that translates the code for the
  Ruby programming language and turns it into effecient
