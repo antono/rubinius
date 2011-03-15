@@ -1,3 +1,15 @@
+rubinius (1.2.2-ppa4) natty; urgency=low
+
+  * Binary target should not directly depend on install.
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Tue, 15 Mar 2011 07:56:34 +0200
+
+rubinius (1.2.2-ppa3) natty; urgency=low
+
+  * Bump for PPA.
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Mon, 14 Mar 2011 22:10:27 +0200
+
 rubinius (1.2.2-ppa2) natty; urgency=low
 
   * Prefix all binaries with rbx

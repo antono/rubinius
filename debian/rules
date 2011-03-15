@@ -35,11 +35,11 @@ build: configure
 install:
 	FAKEROOT=$(PKG_DIR) /usr/bin/ruby1.8 -S rake install
 
-binary: install binary-arch binary-indep
+binary: binary-arch binary-indep
 
-binary-indep:
+binary-indep: install
 
-binary-arch:
+binary-arch: install
 	dh_testroot
 	#dh_prep
 	dh_installdirs
