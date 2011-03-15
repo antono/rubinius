@@ -1,3 +1,9 @@
+rubinius (1.2.3-ppa0) natty; urgency=low
+
+  * New upstream release.
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Tue, 15 Mar 2011 22:01:32 +0200
+
 rubinius (1.2.2-ppa4) natty; urgency=low
 
   * Binary target should not directly depend on install.
